@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <style>
+        body {
+            background-color: crimson;
+        }
+        .white-keys kbd {
+            background-color: white;
+            color: black;
+            text-align: center;
+            display: inline-block;
+            border: 3px solid black;
+            width: 70px;
+            height: 200px;
+            line-height: 300px;
+            position: relative;
+            z-index: 0;
+            font-size: 20px;
+        }
+        .black-keys kbd {
+            background-color: black;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid black;
+            width: 45px;
+            height: 120px;
+            line-height: 150px;
+            position: absolute;
+            top: 0;
+
+            z-index: 1;
+        }
+        .container {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: max-content;
+            height: 200px;
+        }
+        #w {
+            left: 55px;
+        }
+
+        #e {
+            left: 130px;
+        }
+
+        #t {
+            right: 200px;
+        }
+
+        #y {
+            right: 125px;
+        }
+
+        #u {
+            right: 50px;
+        }
+    </style>
+    <script>
+        document.addEventListener("keydown", function(event) {
+            if (event.code == "KeyA") {
+                let audio = new Audio("audio/A.mp3");
+                return audio.play();
+            }
+
+            else if (event.code == "KeyS") {
+                let audio = new Audio("audio/S.mp3");
+                return audio.play();
+            }
+
+            else if (event.code == "KeyD") {
+                let audio = new Audio("audio/D.mp3");
+                return audio.play();
+            }
+
+            else if (event.code == "KeyF") {
+                let audio = new Audio("audio/F.mp3");
+                return audio.play();
+            }
+
+            else if (event.code == "KeyG") {
+                let audio = new Audio("audio/G.mp3");
+                return audio.play();
+            }
+
+            else if (event.code == "KeyH") {
+                let audio = new Audio("audio/H.mp3");
+                return audio.play();
+            }
+
+            else if (event.code == "KeyJ") {
+                let audio = new Audio("audio/H.mp3");
+                return audio.play();
+            }
+            else if (event.key === "W" || event.key === "w") {
+                let audio = new Audio("audio/W.mp3");
+                return audio.play();
+            }
+            else if (event.key === "E" || event.key === "e") {
+                let audio = new Audio("audio/E.mp3");
+                return audio.play();
+            }
+            else if (event.key === "T" || event.key === "t") {
+                let audio = new Audio("audio/T.mp3");
+                return audio.play();
+            }
+            else if (event.key === "Y" || event.key === "y") {
+                let audio = new Audio("audio/Y.mp3");
+                return audio.play();
+            }
+            else if (event.key === "U" || event.key === "u") {
+                let audio = new Audio("audio/U.mp3");
+                return audio.play();
+            }
+            else {
+                console.log("Warning");
+                alert('This key is not handle')
+            }
+        });
+    </script>
+</head>
+<body>
+
+     <div class="container">
+         <div class="white-keys">
+             <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>G</kbd><kbd>H</kbd><kbd>J</kbd>
+         </div>
+
+         <div class="black-keys">
+             <kbd id="w">W</kbd><kbd id="e">E</kbd><kbd id="t">T</kbd><kbd id="y">Y</kbd><kbd id="u">U</kbd>
+         </div>
+
+     </div>
+
+</body>
+</html>
